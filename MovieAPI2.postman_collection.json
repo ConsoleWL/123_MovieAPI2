@@ -1,0 +1,133 @@
+{
+	"info": {
+		"_postman_id": "cfbd4be0-0236-45ed-ace2-25a2cba3f157",
+		"name": "MovieAPI2",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28100906"
+	},
+	"item": [
+		{
+			"name": "Get All Movies",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7117/api/Movie/",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7117",
+					"path": [
+						"api",
+						"Movie",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Movie by Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7117/api/Movie/",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7117",
+					"path": [
+						"api",
+						"Movie",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Movie",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Title\": \"\",\r\n    \"RunningTime\":\"\",\r\n    \"Genre\": \"\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7117/api/Movie/",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7117",
+					"path": [
+						"api",
+						"Movie",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Movie",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Title\": \"\",\r\n    \"RunningTime\": \"\",\r\n    \"Genre\": \"\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7117/api/Movie/",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7117",
+					"path": [
+						"api",
+						"Movie",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Movie",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7117/api/Movie/",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7117",
+					"path": [
+						"api",
+						"Movie",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
