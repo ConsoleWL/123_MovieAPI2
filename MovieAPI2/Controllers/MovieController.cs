@@ -22,8 +22,8 @@ namespace MovieAPI2.Controllers
         {
             List<Models.Movie> movies = _context.Movies.ToList();
 
-            if (movies == null)
-                return NotFound();
+            //if (movies == null)
+            //    return NotFound();
             return StatusCode(200, movies);
         }
 
