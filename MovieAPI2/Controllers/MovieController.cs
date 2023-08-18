@@ -22,8 +22,6 @@ namespace MovieAPI2.Controllers
         {
             List<Models.Movie> movies = _context.Movies.ToList();
 
-            //if (movies == null)
-            //    return NotFound();
             return StatusCode(200, movies);
         }
 
@@ -35,7 +33,7 @@ namespace MovieAPI2.Controllers
             if (movie == null)
                 return NotFound(movie);
 
-            return StatusCode(200, movie);
+            return Ok(movie);  // Ok returns automatically 200 code; // StatusCode(200, movie);
         }
 
         [HttpPost]
@@ -52,19 +50,15 @@ namespace MovieAPI2.Controllers
         [HttpPut("{id}")]
         public IActionResult MovieUpdate(int movieId, [FromBody] Movie movieUpdt)
         {
-            if (movieId <=0 || movieUpdt == null)
-                return BadRequest();
-           
             Movie? movie = _context.Movies.Where(m => m.Id == movieId).SingleOrDefault();
 
             if (movie == null)
                 return NotFound(movie);
-            else
-            {
-                movie.Title = movieUpdt.Title;
-                movie.Duration = movieUpdt.Duration;
-                movie.Genre = movieUpdt.Genre;
-            }
+
+            movie.Title = movieUpdt.Title;
+            movie.Duration = movieUpdt.Duration;
+            movie.Genre = movieUpdt.Genre;
+
             _context.SaveChanges();
 
             return StatusCode(200, movie);
@@ -83,8 +77,5 @@ namespace MovieAPI2.Controllers
             _context.SaveChanges();
             return NoContent();
         }
-
-        
-
     }
 }
